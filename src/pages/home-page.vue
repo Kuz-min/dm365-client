@@ -28,16 +28,39 @@
 </script>
 
 <template>
-  <div class="container">
+  <div class="home-page">
 
-    <div class="input-group">
-      <span class="input-group-text">Найти:</span>
-      <input class="form-control" v-model="text" type="text">
+    <div class="home-page__input ">
+      <span class="home-page__input-label">Найти:</span>
+      <input class="home-page__input-field" v-model="text" type="text">
     </div>
 
     <template v-for="n in news" :key="n.id">
-      <NewsPreview class="my-2" :news="n" />
+      <NewsPreview class="home-page__news-preview" :news="n" />
     </template>
 
   </div>
 </template>
+
+<style lang="scss">
+
+  .home-page {
+    @extend .container;
+  }
+
+  .home-page__input {
+    @extend .input-group;
+  }
+
+  .home-page__input-label {
+    @extend .input-group-text;
+  }
+
+  .home-page__input-field {
+    @extend .form-control;
+  }
+
+  .home-page__news-preview {
+    @extend .border, .rounded-0, .g-0, .my-2;
+  }
+</style>

@@ -1,6 +1,3 @@
-import './bootstrap.scss';
-import './assets/main.css';
-
 import { createApp } from 'vue';
 import App from './app.vue';
 import { NewsService } from '@services/news-service';

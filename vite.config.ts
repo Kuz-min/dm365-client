@@ -20,6 +20,14 @@ export default defineConfig({
     plugin()
   ],
 
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "@/main.scss";`,
+      },
+    },
+  },
+
   server: {
     port: 62554,
     proxy: {
